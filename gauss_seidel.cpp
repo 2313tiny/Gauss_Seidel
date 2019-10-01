@@ -162,36 +162,7 @@ void gauss_seidel_method(const  Matrix & a,
 	elementType  temp = 0;
 	augmented_matrix(a,b,ab);   
 	show_matrix(ab);  	   
-	
-/*
-	do{
-		iteration_step(ab,x_prev, x);
-		show_vector(x);	
-		//temp = 0.0000000001; //rabotaet esli pogreshnosti bolshe raznic@
-	//	temp = x.get_element(0,0) - x_prev.get_element(0,0);
-	//	temp = my_abs(temp);
-	//	std::cout << "outside = " << temp << std::endl;		
-	
-		for (std::size_t i = 0; i < a.get_row(); ++i){
-			elementType temp1 =  x_prev.get_element(i,0) - x.get_element(i,0);
-			std::cout << "temp1 = " << temp1 << std::endl;
-			temp1 = my_abs(temp1);
-			if (temp1 > temp){
-				temp = temp1;
-				std::cout << "temp  = " << temp << std::endl;
-			}	
-		}
 
-	}while(temp >= precision);
-	
-*/	
-/*	iteration_step(ab, x_prev, x);
-	show_vector(x);	
-	iteration_step(ab, x_prev, x); 
-	show_vector(x);
-	iteration_step(ab, x_prev, x); 
-	show_vector(x);		
-*/
 	for (std::size_t i = 0; i < 10; ++i){
 		iteration_step(ab, x_prev, x);
 		show_vector(x);
